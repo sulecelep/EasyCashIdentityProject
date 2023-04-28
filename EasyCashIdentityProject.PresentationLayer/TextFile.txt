@@ -1,0 +1,12 @@
+﻿EASY CASH IDENTITY with ASP .NET CORE 6.0
+
+* 6.0 'da Startup yok o yüzden geçişler kolay oluyor.
+* Tek tek paket yüklemek yerine Solution'da sağ tıklayıp nugette paket yüklüyoruz.
+* Microsoft.EntityFrameworkCore 6.0.16  (6.0'ın son sürümünü indirdik)
+* Microsoft.EntityFrameworkCore.Design 6.0.16  (6.0'ın son sürümünü indirdik)
+* Microsoft.EntityFrameworkCore.SQLServer 6.0.16  (6.0'ın son sürümünü indirdik)
+* Microsoft.EntityFrameworkCore.Tools 6.0.16  (6.0'ın son sürümünü indirdik)
+* Microsoft.AspNetCore.Identity 2.2.0
+* Microsoft.AspNetCore.Identity.EntityFrameworkCore 6.0.16 
+
+
