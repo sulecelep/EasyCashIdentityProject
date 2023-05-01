@@ -1,5 +1,7 @@
 ﻿EASY CASH IDENTITY with ASP .NET CORE 6.0
 
+2.Ders Notları:
+
 * 6.0 'da Startup yok o yüzden geçişler kolay oluyor.
 * Tek tek paket yüklemek yerine Solution'da sağ tıklayıp nugette paket yüklüyoruz.
 * Microsoft.EntityFrameworkCore 6.0.16  (6.0'ın son sürümünü indirdik)
@@ -8,5 +10,23 @@
 * Microsoft.EntityFrameworkCore.Tools 6.0.16  (6.0'ın son sürümünü indirdik)
 * Microsoft.AspNetCore.Identity 2.2.0
 * Microsoft.AspNetCore.Identity.EntityFrameworkCore 6.0.16 
+
+3.Ders Notları:
+
+Katmanların birbirleriyle referans işlemleri.
+EntityLayer: DAL + BL + PL + DTO
+DataAccessLayer: BL + PL
+BusinessLayer: PL
+PresentationLayer: DAL+ BL + DTO
+
+Concrete: Sınıflar için kullanılır. 
+Abstract: Interfacce için.
+
+Access Modifiers: Erişim belirleyicileri
+-Public:her klasör sınıf vs 'den ulaşılabilir.
+-Private: sadece kullanıldığı namespace içinde erişim sağlanabiliyor. 
+-Protected: bağlı bulunduğu sınıftan ve o sınıfı kalıtsal olarak alan sınıflardan erişilebiliyor.
+-Internal: sadece bulunduğu katmanda erişim sağlanabilir.
+
 
 
