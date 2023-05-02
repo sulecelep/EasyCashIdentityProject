@@ -14,10 +14,11 @@
 3.Ders Notları:
 
 Katmanların birbirleriyle referans işlemleri.
-EntityLayer: DAL + BL + PL + DTO
-DataAccessLayer: BL + PL
-BusinessLayer: PL
-PresentationLayer: DAL+ BL + DTO
+EntityLayer: ...
+DataAccessLayer: EL
+BusinessLayer: DAL + EL
+PresentationLayer: EL + DAL+ BL
+//DTO'yu sonra dahil edicez.
 
 Concrete: Sınıflar için kullanılır. 
 Abstract: Interfacce için.
@@ -28,5 +29,23 @@ Access Modifiers: Erişim belirleyicileri
 -Protected: bağlı bulunduğu sınıftan ve o sınıfı kalıtsal olarak alan sınıflardan erişilebiliyor.
 -Internal: sadece bulunduğu katmanda erişim sağlanabilir.
 
+4.Ders Notları:
 
+Migration eklerken Up veritabanında oluşacakları gösterirken, down iptal edersek nelerin silineceğini gösterir.
 
+Asp.Net Users:
+Id'nin türü Nvarchar
+EmailConfirmed türü byte (email adresi onaylandı mı onaylanmadı mı kontrolü)
+-Register > Maile 6 haneli kod Gönder > Kullanıcı kodu girsin > EmailConfirmed true olsun
+-Login > Kullanıcı adı, şifre, email conf==true
+-Stampler başka bir sosyal medya racılığıyla giriş yaparken
+-TwoFactorEnabled (iki adımda doğrulama)
+-LockoutEnd hesabın kilitli kalmasının bitme süresi (default 5 dakika)
+-LockOutEnabled true olursa hatalı girişi sayar
+-AccessFailedCount kaç kere yanlış bilgi girildi
+
+AspNetRoles:
+Id
+Name Admin, Member .. 
+NormalizedName büyük harflerle yazıldığı hali
+ConcurrencyStamp
