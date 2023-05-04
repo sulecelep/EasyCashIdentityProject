@@ -49,3 +49,21 @@ Id
 Name Admin, Member .. 
 NormalizedName büyük harflerle yazıldığı hali
 ConcurrencyStamp
+
+5.Ders Notları:
+
+AspNetUser Tablosunun Özelleştirilmesi
+
+-AspNetUser'a kendimiz property eklemek için Entity katmanında AppUser sınıfını açtık.
+-AppUser sınıfının Identity ile çalışması için IdentityUser classıyla inherit ettik
+-IdentyUser sınıfının primary key yani Id için data tipi olarak int kullanmasını istediğimiz için;
+AppUser:IdentityUser<int> olarak yazdık.
+-AspNetRoles tablosu için de AppRole sınıfı açtık ve IdentityRole sınıfıyla inherit ettik.
+-Nvarchar olduğu için onun da TKey parametresini int yaptık.
+-Migration'da hata aldık. Context sınıfını DbContext ile inherit edip tekrar mig. yaptık böylece Identityden gelen tabloları sildik.
+-Tekrar Context'e IdentityDbContext'i 2. overloadından inherit edip migration yaptığımızda hata almadık.
+-Hatanın sebebi: Identity propertysinin değiştirilmesiydi. Yani IdentityDbContext ile inherit ederken
+en başından AppRole ve AppUser tablosunun da inherit edilmesi gerekiyordu. Ayrı ayrı olunca hata verdi.
+
+
+
