@@ -62,8 +62,33 @@ AppUser:IdentityUser<int> olarak yazdık.
 -Nvarchar olduğu için onun da TKey parametresini int yaptık.
 -Migration'da hata aldık. Context sınıfını DbContext ile inherit edip tekrar mig. yaptık böylece Identityden gelen tabloları sildik.
 -Tekrar Context'e IdentityDbContext'i 2. overloadından inherit edip migration yaptığımızda hata almadık.
--Hatanın sebebi: Identity propertysinin değiştirilmesiydi. Yani IdentityDbContext ile inherit ederken
-en başından AppRole ve AppUser tablosunun da inherit edilmesi gerekiyordu. Ayrı ayrı olunca hata verdi.
+-Hatanın sebebi: Identity classlarının ilişkilerinin kaldırılıp migration edilmesi gerekiyordu.
 
+6. Ders Notları:
+Dto Katmanı ve AppUserRegisterDto Sınıfı
 
+Dto(Data Transfer Object)
 
+-Bir Entity'e ait bütün propertylerle işlem yapmak yerine, sadece kendi istediğim propertyleri
+kullanabilmek adına Dto katmanına ihtiyaç var.
+-Dto katmanı içerisinde Validation lar normal şartlar altında yazılabilir ama çok tercih edilmez.
+-Solid prensiplerinden s harfi Single Responsibility Principle'ı ezmiş oluruz. Nedir bu prensip:
+-Bir sınıf(nesne) yalnızca bir amaç için değiştirilebilir. o da o sınıfa yükleen sorumluluktur,
+yani bir sınıfın(fonksiyona da indirgenebilir) yapması gereken yalnızca bir işi olması gerekir.
+Eğer geliştirdiğiniz sınıf ya da fonksiyon birden fazla amaca hizmet ediyorsa, bu kurala aykırı bir 
+geliştirme sürecinde olduğunuz anlamına geliyor. Bunu farkettiğinizde amaçlara uygun olarak parçalamanız gerekmektedir.
+Bir sınıfı veya fonksiyonu geliştirdiğimizde sorumluluğunu ya da amacını iyi belirleyip, sınıfı ona göre tasarlamamız gerekir, 
+böylece oluşabilecek herhangi bir değişimden, olabildiğince az şeyi güncelleyerek ve düzelterek istenilen geliştirmeyi gerçekleştirmiş oluruz. 
+Sorumluluğun azaltılması demek değişime daha kolay adapte olmak demektir.
+
+--Yani Dto katmanında validation yapabilirdik ama solidi ezmemek için Business katmanında Fluent
+Validation klasöründe sınıf açıp orada bu işlemleri yapacağız. Validation sınıfının sadece validation
+görevi olacak, Dto sınıflarının sadece property tutma amacı olacak, birden fazla amaç yüklemicez.
+
+7. Ders Notları:
+AppUserRegister Fluent Validation
+
+BusinessLayer'a: 
+-FluentValidation 11.5.2 paketini yükledik.
+-FluentValidation.AspNetCore 11.3.0 paketini yükledik
+-FluentValidation.DependencyInjectionExtensions 11.5.2 yi yükledik
