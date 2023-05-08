@@ -92,3 +92,11 @@ BusinessLayer'a:
 -FluentValidation 11.5.2 paketini yükledik.
 -FluentValidation.AspNetCore 11.3.0 paketini yükledik
 -FluentValidation.DependencyInjectionExtensions 11.5.2 yi yükledik
+
+8. Ders Notları:
+
+-Abstract: Interface'leri tutacak
+-Concrete: Context sınıfını tutucaz.
+-EntityFramework: Entity'e özgü metotları tutucaz 
+-Repositories: Tasarım desenidir, CRUD işlemlerini tekrardan kurtarıyor. Generic bir yapı kurcaz. İskelet yapıdır.
+-Migrations: Migration detayları burada bulunur.
