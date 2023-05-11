@@ -100,3 +100,26 @@ BusinessLayer'a:
 -EntityFramework: Entity'e özgü metotları tutucaz 
 -Repositories: Tasarım desenidir, CRUD işlemlerini tekrardan kurtarıyor. Generic bir yapı kurcaz. İskelet yapıdır.
 -Migrations: Migration detayları burada bulunur.
+
+9. Ders Notları:
+
+-Dependency Injection: Dependency injection uygulamasaydık öncelikle çok büyük bir performans sorunumuz olurdu. 
+Singelton vb. desenleri uygulamamıza izin veriyor. 
+2. olarak entity framework vb. yapılara bağımlı olacaktık. 
+3. olarak mesela ui katmanında kullanmak istediğimizde iç içe 
+birbirine bağımlı classları bu şekilde kullanmamız gerekirdi. 
+new BusinessService<DataAccessService> şeklinde newlememiz gerekir 
+çok kod tekrarına düşer ve hata yapardık. Bunun yerine bir IOC container 
+ve Interface yapısı sayesinde bunu çok daha kolaylaştırıyoruz.
+
+-Bir sınıfta diğer sınıfı newlememk gerekiyor, bağımlılıkları minimize etmeye dependecy
+injection deniyor.
+
+11. Ders Notları:
+
+-Identity'de şifre formatı
+-Şifre en az 6 karakterden oluşacak
+-En az 1 küçük harf
+-En az 1 büyük harf
+-En az 1 sembol
+-En az 1 sayı 
