@@ -123,3 +123,8 @@ injection deniyor.
 -En az 1 büyük harf
 -En az 1 sembol
 -En az 1 sayı 
+
+-EF6'da prop tanımlarken ? koymalıyız, yoksa not null gidiyor.
+
+12. Ders Notları:
+Validation hatalarının Türkçeleştirilmesi
