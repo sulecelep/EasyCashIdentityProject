@@ -128,3 +128,10 @@ injection deniyor.
 
 12. Ders Notları:
 Validation hatalarının Türkçeleştirilmesi
+
+13. Ders Notları:
+-Random sınıfından Confirm Code oluşturduk.
+
+14. Ders Notları:
+-Codu Mail atacağız.
+-NETCore.MailKit 2.1.0 paketini presentation layer'a indirdik.
