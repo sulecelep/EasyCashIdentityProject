@@ -55,9 +55,12 @@ namespace EasyCashIdentityProject.PresentationLayer.Controllers
                     mimeMessage.Subject = "Easy Cash Onay Kodu";
                     SmtpClient client = new SmtpClient();
                     client.Connect("smtp.gmail.com", 587, false);
-                    client.Authenticate("traversalcore1907@gmail.com", "fmtkstzuctrhshxa");
+                    client.Authenticate("traversalcore1907@gmail.com", "");
                     client.Send(mimeMessage);
                     client.Disconnect(true);
+
+                    TempData["Mail"] = appUserRegisterDto.Email;
+
                     return RedirectToAction("Index", "ConfirmMail");
                 }
                 else

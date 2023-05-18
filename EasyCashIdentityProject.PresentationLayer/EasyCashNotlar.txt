@@ -135,3 +135,11 @@ Validation hatalarının Türkçeleştirilmesi
 14. Ders Notları:
 -Codu Mail atacağız.
 -NETCore.MailKit 2.1.0 paketini presentation layer'a indirdik.
+
+
+15. Ders Notları:
+Confirm Sayfasına Mail Adresi Taşıma
+
+Controller'lar arası veri taşıma:
+Register kontroller'da TempData oluşturup, ConfirmMail'in Get metodunda bunu bir değişkene atadık.
+ViewBag ile veriyi taşımış olduk
