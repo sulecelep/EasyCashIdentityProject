@@ -143,3 +143,9 @@ Confirm Sayfasına Mail Adresi Taşıma
 Controller'lar arası veri taşıma:
 Register kontroller'da TempData oluşturup, ConfirmMail'in Get metodunda bunu bir değişkene atadık.
 ViewBag ile veriyi taşımış olduk
+
+18. Ders Notları:
+Login İşlemi
+signInManager.PasswordSignInAsync metodunun overloadında 
+isPersistent: bu şifre çerezlerde saklansın mı anlamına geliyor, beni hatırla işlemi, biz false yaptık
+lockoutOnFailure: başarısız giriş işlemini AccessFailedCount'a atar. 5 kere yanlış girilirse sistemden 5 dk uzak duracak. biz true yaptık.
