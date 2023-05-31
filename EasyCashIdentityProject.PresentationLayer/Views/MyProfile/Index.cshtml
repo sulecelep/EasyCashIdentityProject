@@ -5,7 +5,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
+   @* Layout Olarak Kullanıyoruz*@
 @await Component.InvokeAsync("_CustomerLayoutHeadPartial")
 <body class="nav-md">
     <div class="container body">
@@ -20,7 +20,7 @@
                 <div class="">
                     <div class="page-title">
                         <div class="title_left">
-                            <h3>Fixed Sidebar <small> Just add class <strong>menu_fixed</strong></small></h3>
+                            @RenderBody()
                         </div>
                     </div>
                 </div>
